@@ -1,19 +1,23 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
 
 public class HotelBookingApp {
 
     public static void main(String[] args) {
 
-        Set<String> bogieIds = new HashSet<>();
+        LinkedList<String> train = new LinkedList<>();
 
-        bogieIds.add("B1");
-        bogieIds.add("B2");
-        bogieIds.add("B3");
-        bogieIds.add("B2");
-        bogieIds.add("B1");
+        train.add("Engine");
+        train.add("Sleeper");
+        train.add("AC");
+        train.add("Cargo");
+        train.add("Guard");
 
-        System.out.println("Unique Bogie IDs:");
-        System.out.println(bogieIds);
+        train.add(2, "Pantry Car");
+
+        train.removeFirst();
+        train.removeLast();
+
+        System.out.println("Final Train Consist:");
+        System.out.println(train);
     }
 }
