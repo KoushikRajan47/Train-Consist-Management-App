@@ -1,23 +1,19 @@
-import java.util.LinkedList;
+import java.util.LinkedHashSet;
 
 public class HotelBookingApp {
 
     public static void main(String[] args) {
 
-        LinkedList<String> train = new LinkedList<>();
+        LinkedHashSet<String> train = new LinkedHashSet<>();
 
         train.add("Engine");
         train.add("Sleeper");
-        train.add("AC");
         train.add("Cargo");
         train.add("Guard");
 
-        train.add(2, "Pantry Car");
+        train.add("Sleeper");
 
-        train.removeFirst();
-        train.removeLast();
-
-        System.out.println("Final Train Consist:");
+        System.out.println("Final Train Formation:");
         System.out.println(train);
     }
 }
