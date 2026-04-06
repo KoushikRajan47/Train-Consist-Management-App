@@ -1,28 +1,19 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class HotelBookingApp {
 
     public static void main(String[] args) {
 
-        List<String> bogies = new ArrayList<>();
+        Set<String> bogieIds = new HashSet<>();
 
-        bogies.add("Sleeper");
-        bogies.add("AC Chair");
-        bogies.add("First Class");
+        bogieIds.add("B1");
+        bogieIds.add("B2");
+        bogieIds.add("B3");
+        bogieIds.add("B2");
+        bogieIds.add("B1");
 
-        System.out.println("After adding bogies:");
-        System.out.println(bogies);
-
-        bogies.remove("AC Chair");
-
-        System.out.println("\nAfter removing AC Chair:");
-        System.out.println(bogies);
-
-        boolean exists = bogies.contains("Sleeper");
-        System.out.println("\nDoes Sleeper exist? " + exists);
-
-        System.out.println("\nFinal bogie list:");
-        System.out.println(bogies);
+        System.out.println("Unique Bogie IDs:");
+        System.out.println(bogieIds);
     }
 }
