@@ -5,13 +5,24 @@ public class HotelBookingApp {
 
     public static void main(String[] args) {
 
-        System.out.println("=== Train Consist Management App ===");
+        List<String> bogies = new ArrayList<>();
 
-        List<String> trainConsist = new ArrayList<>();
+        bogies.add("Sleeper");
+        bogies.add("AC Chair");
+        bogies.add("First Class");
 
-        System.out.println("Train consist initialized.");
-        System.out.println("Initial bogie count: " + trainConsist.size());
+        System.out.println("After adding bogies:");
+        System.out.println(bogies);
 
-        System.out.println("Program continues...");
+        bogies.remove("AC Chair");
+
+        System.out.println("\nAfter removing AC Chair:");
+        System.out.println(bogies);
+
+        boolean exists = bogies.contains("Sleeper");
+        System.out.println("\nDoes Sleeper exist? " + exists);
+
+        System.out.println("\nFinal bogie list:");
+        System.out.println(bogies);
     }
 }
